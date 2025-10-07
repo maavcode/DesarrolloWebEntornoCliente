@@ -1,12 +1,12 @@
 import { getImageUrl } from "../functions/getImageUrl";
 
 
-export default function Avatar({person, size = "s"}) {
+export default function Avatar({person, size = 100}) {
   return (
     <img
       className="avatar"
       src={getImageUrl(person)}
-      alt= {person.name}
+      alt={person.name}
       width={size}
       height={size}
     />

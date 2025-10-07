@@ -1,13 +1,21 @@
 import './App.css'
-import Avatar from './components/Avatar'
-import Galery from './components/Galery'
+import List from './components/List'
+import PackingList from './components/PackingList'
+import Profile from './components/Profile'
+import Recipes from './components/Recipes';
+import TeaGathering from './components/TeaGathering';
+import TeaSet from './components/TeaSet';
 
+var time = new Date().getTime();
 function App() {
   return (
     <>
-      <Avatar person ={{name:"Pepita Grilla", imageId:"1bX5QH6"}}
-              size={100}/>
-      <Galery />
+      <Profile />
+      <PackingList />
+      <List />
+      <Recipes drinkers1={2} drinkers2={4}/>
+      <TeaSet />
+      <TeaGathering />
     </>
   )
 }
