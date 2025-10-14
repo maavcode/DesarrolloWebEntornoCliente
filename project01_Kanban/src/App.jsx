@@ -48,7 +48,8 @@ function App() {
             <header>
                 <h1>Tablero Kanban</h1>
             </header>
-            <main >
+            <main>
+                {/* Llamo al componente KanBoard y le paso la lista de columnas */}
                 <KanbanBoard columns={initialBoardData}/>
             </main>
         </div>

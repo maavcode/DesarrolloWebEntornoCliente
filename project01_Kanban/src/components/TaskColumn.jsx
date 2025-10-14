@@ -5,6 +5,7 @@ export default function TaskColumn({title, tasks}) {
     return (
         <div style={{width:200, margin:50, backgroundColor:"gray"}}>
             <h1>{title}</h1>
+            {/* Por cada task que hay en la columna, creo un TasKItem el cual tendra mediante las props, los atributos especificos de esa task */}
             {tasks.map(task=>
                 <TaskItem title={task.title} priority={task.priority} dueDate={task.dueDate} />
             )}
