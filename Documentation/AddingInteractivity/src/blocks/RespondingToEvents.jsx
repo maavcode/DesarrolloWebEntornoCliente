@@ -1,6 +1,7 @@
 export default function RespondingToEvents() {
     return(
     <>
+        <h1>1 - Responding To Events</h1>
         <ButtonDoNothing />
         <ButtonDoSomething />
     </>
