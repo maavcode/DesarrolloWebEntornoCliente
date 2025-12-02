@@ -1,19 +1,28 @@
 import { useState } from "react";
 
 
-export default function TaskForm(
-    onAddTask
-) {
+export default function TaskForm({onAddTask}) {
     const [value, setValue] = useState("") 
+    
+    function handleSubmit(e){
+        e.preventDefault();
+                        onAddTask(value); 
+                        setValue(''); 
+    }
 
+    function handleValueChange(e) {
+        setValue(e.target.value)
+    }
+    
     return (
         <>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <textarea 
                     value={value}
-                    onChange={(e) => setValue(e.target.value)}>
+                    onChange={handleValueChange}
+                        >
                 </textarea>
-                <button onClick={() => onAddTask({value})}>
+                <button type="submit">
                     Añadir
                 </button>
             </form>
