@@ -1,0 +1,27 @@
+.product-box {
+  display: flex;
+  justify-content: space-between; /* coloca botones a los extremos */
+  align-items: center;
+  border: 2px solid black; /* borde negro */
+  border-radius: 10px;      /* bordes redondeados */
+  padding: 5px;            /* espacio interno */
+  margin-bottom: 10px;      /* separación entre productos */
+  background-color: greenyellow;
+}
+
+.product-id, .product-name {
+  margin-right: 10px; /* separación entre texto y botones */
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 2px solid black; /* borde negro */
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0; /* efecto hover opcional */
+}
