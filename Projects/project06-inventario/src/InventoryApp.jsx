@@ -5,27 +5,17 @@ import { useReducer } from 'react';
 
 export default function InventoryApp() {
   
-  
-  
   const [inventory, dispatch] = useReducer(inventoryReducer, initialInventory);
-  
-  function handleRemove(){
-    dispatch({
-      type: 'remove',
-      id: nextId++
-    });
-  }
 
   return (
     <>
-      <ProductList  inventory={inventory} dispatch={dispatch}/>
-      
+      <ProductList inventory={inventory} dispatch={dispatch}/>
+      <InventoryControls inventory={inventory} dispatch={dispatch}/>
     </>
   )
   
 }
 
-let nextId = 104;
   const initialInventory = [
     {
       id: 101,
