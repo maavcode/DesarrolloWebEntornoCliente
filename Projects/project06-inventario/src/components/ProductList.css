@@ -1,27 +1,79 @@
-.product-box {
-  display: flex;
-  justify-content: space-between; /* coloca botones a los extremos */
-  align-items: center;
-  border: 2px solid black; /* borde negro */
-  border-radius: 10px;      /* bordes redondeados */
-  padding: 5px;            /* espacio interno */
-  margin-bottom: 10px;      /* separación entre productos */
-  background-color: greenyellow;
+/* --- Tabla de Productos --- */
+
+.product-list-container {
+  overflow-x: auto;
+  margin-bottom: 30px;
+  /* El contenedor principal de la lista */
 }
 
-.product-id, .product-name {
-  margin-right: 10px; /* separación entre texto y botones */
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-button {
+/* Cabecera de la tabla - Fondo verde oscuro (como en la imagen) */
+thead th {
+  background-color: #27ae60; /* Verde principal */
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Filas del cuerpo de la tabla */
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/* --- Botones en la Tabla (Acción 1 y Acción 2) --- */
+
+.sell-button {
+  background-color: #3498db; /* Azul para Vender Ítem */
+  color: white;
+  border: none;
   padding: 5px 10px;
-  border-radius: 8px;
-  border: 2px solid black; /* borde negro */
-  border-radius: 10px;
-  background-color: white;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #f0f0f0; /* efecto hover opcional */
+.sell-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.sell-button:disabled {
+  background-color: #95a5a6; /* Gris para deshabilitado (Stock 0) */
+  cursor: not-allowed;
+}
+
+.remove-button {
+  background-color: #e74c3c; /* Rojo para Eliminar Ítem */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  /* margin-left: 10px; */ /* Descomenta si quieres separarlos más de la columna contigua */
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+}
+
+/* Si usaste <h3> dentro del botón, este estilo los elimina */
+.sell-button h3,
+.remove-button h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0;
 }
