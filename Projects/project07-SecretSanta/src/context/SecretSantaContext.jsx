@@ -1,9 +1,9 @@
 import React, { createContext, useReducer, useContext } from 'react';
 
 const initialState = {
-  participants: [], 
-  assignments: {},  
-  isDrawn: false,   
+  participants: [],
+  assignments: {},
+  isDrawn: false,
 };
 
 const secretSantaReducer = (state, action) => {
@@ -40,10 +40,10 @@ const secretSantaReducer = (state, action) => {
       let newAssignments = {};
       let isSuccess = false;
 
-      
+
       while (!isSuccess) {
-      
-        receivers.sort(() => Math.random() - 0.5); 
+
+        receivers.sort(() => Math.random() - 0.5);
         newAssignments = {};
         isSuccess = true;
 
@@ -51,9 +51,9 @@ const secretSantaReducer = (state, action) => {
           const buyer = buyers[i];
           const receiver = receivers[i];
 
-          
+
           if (buyer === receiver) {
-            isSuccess = false; 
+            isSuccess = false;
             break;
           }
           newAssignments[buyer] = receiver;
@@ -66,22 +66,20 @@ const secretSantaReducer = (state, action) => {
         isDrawn: true,
       };
 
-      case 'RESET_ASIGNATIONS': // Gestiona el reseteo de las asignaciones
-        return{
-          ...state,
-          isDrawn:false,
-          assignments: {}
-        }
+    case 'RESET_PARTICIPANTS': // Gestiona reseteo de participantes
+      return { ...initialState }; // Copia el initial state
 
-      case 'RESET_PARTICIPANTS':
-        return{
-          initialState,
-        }
+    case 'RESET_ASSIGNMENTS': // Gestiona reseteo de asignamientos
+      return {
+        ...state,
+        assignments: {},
+        isDrawn: false,
+      };
 
-      default:
+    default:
       return state;
   }
-  
+
 };
 
 
