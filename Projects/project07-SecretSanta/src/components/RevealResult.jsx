@@ -23,7 +23,7 @@ const RevealResult = () => {
   const handleReset = () => {
     setRevealedAssignment(null);
     dispatch(
-      {type:"RESET_ASIGNATIONS"}
+      {type:"RESET_ASSIGNMENTS"}
     );
   }
 

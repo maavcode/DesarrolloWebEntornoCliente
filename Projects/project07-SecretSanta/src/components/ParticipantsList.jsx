@@ -42,7 +42,7 @@ const ParticipantsList = () => {
       </ul>
 
       {participants.length >= 3 && !isDrawn && (
-        <button onClick={handleRunDraw}>
+        <button onClick={handleRunDraw} className="border rounded pl-1 pr-1">
           🎉 ¡Realizar Sorteo del Amigo Invisible!
         </button>
       )}
