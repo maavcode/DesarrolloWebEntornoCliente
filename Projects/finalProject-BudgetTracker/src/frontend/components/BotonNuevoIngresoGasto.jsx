@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function BotonPruebaGuardar() {
+export default function BotonNuevoIngresoGasto() {
   const navigate = useNavigate();
 
   return (

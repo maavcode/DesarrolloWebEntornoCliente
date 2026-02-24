@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BotonPruebaGuardar from "../components/BotonPruebaGuardar";
+import BotonNuevoIngresoGasto from "../components/BotonNuevoIngresoGasto";
 import { movimientosRepository } from "../../backend/movimientosRepository";
 import { useAuth } from "../../AuthContext";
 
@@ -46,7 +46,7 @@ export default function IngresosGastos() {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold">Movimientos</h2>
 
-        <BotonPruebaGuardar />
+        <BotonNuevoIngresoGasto />
       </div>
 
       <div className="bg-white p-6 rounded-xl shadow">
