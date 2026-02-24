@@ -12,7 +12,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebaseConfig"
 
-export function budgetRepository(user) {
+export function movimientosRepository(user) {
   const [datos, setDatos] = useState([]);
 
   // Obtener datos

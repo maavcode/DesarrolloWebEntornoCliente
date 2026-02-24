@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./AuthContext";
 import Login from "./frontend/pages/Login";
 import Home from "./frontend/pages/Home";
+import NuevoIngresoGasto from "./frontend/pages/nuevoIngreso";
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -26,6 +27,9 @@ export default function App() {
               </PrivateRoute>
             } 
           />
+
+          <Route path="/nuevoIngresoGasto" element={<NuevoIngresoGasto />} />
+
 
           {/* Redirección por defecto */}
           <Route path="*" element={<Navigate to="/app" />} />
